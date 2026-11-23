@@ -70,7 +70,7 @@ section{padding:72px 0}
 /* work grid */
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.card.w12{grid-column:span 12}.card.w8{grid-column:span 8}.card.w4{grid-column:span 4}.card.w6{grid-column:span 6}
+.card.w12{grid-column:span 12}.cta-card{justify-content:center;background:linear-gradient(135deg,#221b12,#151311);border-color:#3a2f20}.cta-card .body{justify-content:center;padding:40px}.cta-card h3{font-size:clamp(26px,3vw,38px)}.card.w8{grid-column:span 8}.card.w4{grid-column:span 4}.card.w6{grid-column:span 6}
 .media{position:relative;background:#000;cursor:pointer}
 .media video{display:block;width:100%;height:100%;object-fit:cover}
 .media.ui{cursor:default;background:#d9e2db}.media.ui img{display:block;width:100%;height:auto}
@@ -239,23 +239,15 @@ footer{padding:40px 0;color:var(--dim);font-size:13px;text-align:center}
       </div>
     </article>
 
-    <article class="card w4">
-      <div class="media tall"><video preload="none" playsinline poster="media/shorts_glitches.jpg" src="media/shorts_glitches.mp4"></video><div class="play"><span></span></div></div>
+    <article class="card w8 cta-card">
       <div class="body">
-        <div class="tags"><span>Shorts</span><span data-i="tag_auto">Automation</span></div>
-        <h3 data-i="sh_h">Faceless Shorts pipeline</h3>
-        <p data-i="sh_p">An automated "factory" for a YouTube Shorts channel: topic → script → AI voice → edit with captions and SFX → CapCut project for final polish. Up to 3 Shorts a day.</p>
+        <div class="tags"><span data-i="cta_tag">Your project</span></div>
+        <h3 data-i="cta_h">Your project could be next</h3>
+        <p data-i="cta_p">Ad, Reels, 3D product shot, website, interface or a custom AI tool — send a short brief and references, and get a plan with a fixed price within a few hours.</p>
+        <div class="cta" style="margin-top:8px"><a class="btn main" href="#contact" data-i="cta1b">Start a project →</a><a class="btn" href="#services" data-i="cta3">See services & prices</a></div>
       </div>
     </article>
 
-    <article class="card w4">
-      <div class="media tall"><video preload="none" playsinline poster="media/shorts_voice.jpg" src="media/shorts_voice.mp4"></video><div class="play"><span></span></div></div>
-      <div class="body">
-        <div class="tags"><span>Shorts</span><span>Voice-over</span></div>
-        <h3 data-i="sv_h">Short with natural AI narration</h3>
-        <p data-i="sv_p">Hook in the first second, tight cuts, burned-in captions, voice that sounds human. Ready for YouTube Shorts, Reels and TikTok.</p>
-      </div>
-    </article>
 
   </div>
 </div></section>
@@ -331,6 +323,7 @@ const RU = {
   m_len:"итоговый ролик", m_ver:"версии с правками клиента", m_time:"до первого монтажа",
   au_h:"3D-анимация товара", au_p:"Концепт флакона духов: модель, свет и рендер в Blender — стекло, жидкость, золото, студийный свет, вращение 360°. Так же сделаю ваш товар по фото или эскизу.",
   ui_h:"UX/UI-концепт: приложение кофейни с заказом заранее", ui_p:"Главная с прогрессом бонусов, настройка напитка и отслеживание заказа. Одно главное действие на экран, понятная иерархия, крупные кнопки и небольшая дизайн-система (цвета, шрифты, компоненты) для разработчиков.",
+  cta_tag:"Ваш проект", cta_h:"Следующим может быть ваш проект", cta_p:"Реклама, Reels, 3D-визуализация товара, сайт, интерфейс или своя ИИ-программа — пришлите короткое описание и референсы, и в течение пары часов получите план и фиксированную цену.", cta1b:"Обсудить проект →", cta3:"Услуги и цены",
   tr_h:"ИИ-синхронный переводчик — работает без интернета на ноутбуке",
   tr_p:"Моя программа для мероприятий и Zoom: речь → текст → перевод → голос на другом языке, примерно через 1,5 с после спикера. Работала на живой медицинской конференции. Нажмите play: английская лекция и поверх — русский ИИ-голос.",
   tr_1:"7 языков: русский, английский, казахский, китайский, испанский, немецкий, французский", tr_2:"Канал перевода в Zoom, поток для vMix/NDI в зал, звук на телефоны гостей по QR", tr_3:"Без интернета и поминутной оплаты — один ноутбук с RTX",
@@ -338,8 +331,6 @@ const RU = {
   ln_h:"Длинный ролик для YouTube: сценарий, ИИ-озвучка, монтаж", ln_p:"7-минутный новостной ролик для игрового канала: сценарий, живой ИИ-голос, темп, перебивки, титры, две обложки для A/B. Показан фрагмент.",
   ln_1:"Голос генерируется локально — не роботизированный TTS", ln_2:"Две обложки для A/B-теста",
   sc_h:"3D-ролик «What if»", sc_p:"«Что если ваш чемодан тяжелеет вдвое с каждым рейсом?» — полностью анимированный 3D-Reels, смонтирован в бит трендового трека, звук на каждом ударе.",
-  sh_h:"Конвейер шортсов без лица", sh_p:"Автоматическая «фабрика» для канала Shorts: тема → сценарий → ИИ-голос → монтаж с субтитрами и звуками → проект CapCut для финальной полировки. До 3 шортсов в день.",
-  sv_h:"Шортс с живой ИИ-озвучкой", sv_p:"Хук в первую секунду, плотный монтаж, вшитые субтитры, голос как у человека. Готово для Shorts, Reels и TikTok.",
   svc_h:"Услуги и цены", svc_p:"Фиксированная цена после короткого брифа. Итог зависит от длины и сложности — цену называю до начала работы.",
   s1_h:"ИИ-реклама / имиджевый ролик", s1_p:"Сцены от нейросети по вашим фото и референсам, реальные кадры, монтаж, цвет, музыка.", s1_pr:"от 60 000 ₸", s1_t:"2–4 дня",
   s2_h:"Reels / Shorts / TikTok", s2_p:"Из ваших съёмок или стока: хук, субтитры, музыка, звуки. Пакеты для регулярного постинга.", s2_pr:"от 10 000 ₸ за ролик", s2_t:"24–48 ч",
