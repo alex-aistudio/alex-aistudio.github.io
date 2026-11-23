@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex · AI Video, 3D, Design & Web</title>
+<meta name="description" content="AI video ads, Reels & Shorts editing, 3D product animation, landing pages, Telegram bots and custom AI tools. Fast delivery, two revisions included.">
+<meta property="og:title" content="Alex · AI Video, 3D & Web">
+<meta property="og:description" content="AI video ads, Shorts, 3D product animation, websites and custom AI tools.">
+<meta property="og:image" content="media/intercontinental_excerpt.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0b0a; --bg2:#151311; --card:#1a1715; --line:#2a2522;
+  --text:#f2ede6; --muted:#a39a90; --dim:#6f665e;
+  --gold:#f2b84b; --gold2:#ffd88a;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(12,11,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;height:62px}
+.logo{font-family:Fraunces,serif;font-size:20px;font-weight:600;text-decoration:none}
+.logo b{color:var(--gold)}
+nav .links{display:flex;gap:22px;margin-left:auto;font-size:14px;color:var(--muted)}
+nav .links a{text-decoration:none}
+nav .links a:hover{color:var(--text)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px}
+.lang button{background:none;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font:inherit}
+.lang button.on{background:var(--gold);color:#1a1206;font-weight:600}
+
+/* hero */
+.hero{padding:96px 0 72px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:720px;height:720px;background:radial-gradient(closest-side,rgba(242,184,75,.18),transparent);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);border:1px solid rgba(242,184,75,.35);padding:6px 14px;border-radius:999px;margin-bottom:28px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:#5bd88a;box-shadow:0 0 10px #5bd88a}
+.hero h1{font-size:clamp(40px,5.2vw,70px);max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:60ch;margin:24px 0 36px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);transition:.2s}
+.btn.main{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.btn.main:hover{background:var(--gold2)}
+.btn:not(.main):hover{border-color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-grid .stats{grid-column:1/-1}
+.reel{position:relative;padding:0 0 40px 0}
+.reel>video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:22px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6);display:block}
+.reel-3d{position:absolute;left:-34px;bottom:0;width:38%;aspect-ratio:1;border-radius:18px;overflow:hidden;border:1px solid #3a3029;box-shadow:0 20px 50px rgba(0,0,0,.7)}
+.reel-3d video{width:100%;height:100%;object-fit:cover;display:block}
+.reel-tag{position:absolute;right:14px;top:14px;font-size:12px;background:rgba(12,11,10,.75);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;color:var(--muted)}
+.stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.stats div b{display:block;font-family:Fraunces,serif;font-size:32px;color:var(--text)}
+.stats div span{font-size:14px;color:var(--dim)}
+
+/* sections */
+section{padding:72px 0}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.sh h2{font-size:clamp(30px,4vw,46px)}
+.sh p{color:var(--muted);max-width:46ch}
+
+/* work grid */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card.w12{grid-column:span 12}.card.w8{grid-column:span 8}.card.w4{grid-column:span 4}.card.w6{grid-column:span 6}
+.media{position:relative;background:#000;cursor:pointer}
+.media video{display:block;width:100%;height:100%;object-fit:cover}
+.media.ui{cursor:default;background:#d9e2db}.media.ui img{display:block;width:100%;height:auto}
+.media.wide{aspect-ratio:16/9}.media.tall{aspect-ratio:9/16}.media.sq{aspect-ratio:1/1}
+.card.w4 .media.tall{max-height:640px}
+.play{position:absolute;inset:0;display:grid;place-items:center;transition:.25s;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55))}
+.play span{width:66px;height:66px;border-radius:50%;background:rgba(242,184,75,.95);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.play span:after{content:"";border-left:18px solid #1a1206;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.media.playing .play{opacity:0;pointer-events:none}
+.body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;color:var(--gold);background:rgba(242,184,75,.1);padding:3px 10px;border-radius:999px}
+.card h3{font-size:24px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;display:grid;gap:6px;font-size:14px;color:var(--muted)}
+.card ul li:before{content:"→ ";color:var(--gold)}
+.metrics{display:flex;gap:22px;flex-wrap:wrap;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.metrics b{font-family:Fraunces,serif;font-size:22px;color:var(--text);display:block}
+.metrics span{font-size:12px;color:var(--dim)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.s{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px}
+.s .ico{font-size:26px}
+.s h3{font-size:20px}
+.s p{color:var(--muted);font-size:14px;flex:1}
+.s .price{font-weight:600;color:var(--gold)}
+.s .time{font-size:13px;color:var(--dim)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:st}
+.step{border-top:2px solid var(--gold);padding-top:18px}
+.step:before{counter-increment:st;content:"0" counter(st);font-family:Fraunces,serif;color:var(--gold);font-size:14px}
+.step h3{font-size:19px;margin:6px 0}
+.step p{color:var(--muted);font-size:14px}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tools span{border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:14px;color:var(--muted)}
+
+/* contact */
+.contact{background:linear-gradient(135deg,#221b12,#141210);border:1px solid #3a2f20;border-radius:28px;padding:56px;text-align:center}
+.contact h2{font-size:clamp(30px,4.4vw,52px);margin-bottom:14px}
+.contact p{color:var(--muted);max-width:52ch;margin:0 auto 30px}
+.contact .cta{justify-content:center}
+footer{padding:40px 0;color:var(--dim);font-size:13px;text-align:center}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .reel-3d{left:auto;right:-6px;width:34%}
+  .card.w12,.card.w8,.card.w4,.card.w6{grid-column:span 12}
+  .card.w4 .media.tall{max-height:none}
+  .steps{grid-template-columns:1fr 1fr}
+  nav .links{display:none}
+  .lang{margin-left:auto}
+  .contact{padding:36px 20px}
+}
+@media (max-width:520px){ .wrap{padding:0 16px} .steps{grid-template-columns:1fr} .hero{padding:64px 0 48px} }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#">Alex<b>.</b></a>
+  <div class="links">
+    <a href="#work" data-i="nav_work">Work</a>
+    <a href="#services" data-i="nav_svc">Services</a>
+    <a href="#process" data-i="nav_proc">How I work</a>
+    <a href="#contact" data-i="nav_contact">Contact</a>
+  </div>
+  <div class="lang"><button data-l="en" class="on">EN</button><button data-l="ru">RU</button></div>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+  <div class="eyebrow"><i></i><span data-i="avail">Available for new projects · replies within a few hours</span></div>
+  <h1 data-i="h1" data-html>AI video, 3D & web — <em>delivered in days</em>, not weeks.</h1>
+  <p class="lead" data-i="lead">I make ads and brand films with AI-generated scenes, edit Reels & Shorts, animate products in 3D, design interfaces and brands, and build websites, bots and custom AI tools. One person, a full AI production stack, fast turnaround.</p>
+  <div class="cta">
+    <a class="btn main" href="#contact" data-i="cta1">Start a project →</a>
+    <a class="btn" href="#work" data-i="cta2">See the work</a>
+  </div>
+  </div>
+  <div class="reel">
+    <video autoplay muted loop playsinline poster="media/intercontinental_excerpt.jpg" src="media/intercontinental_excerpt.mp4"></video>
+    <div class="reel-3d"><video autoplay muted loop playsinline poster="media/aurum_3d.jpg" src="media/aurum_3d.mp4"></video></div>
+    <div class="reel-tag" data-i="reel_tag">Hotel brand film · AI + real footage</div>
+  </div>
+  <div class="stats">
+    <div><b>5★</b><span data-i="st1">hotel brand film delivered</span></div>
+    <div><b>24–48h</b><span data-i="st2">first draft</span></div>
+    <div><b>2</b><span data-i="st3">revisions included</span></div>
+    <div><b>EN · RU</b><span data-i="st4">communication</span></div>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <div class="sh">
+    <h2 data-i="work_h">Selected work</h2>
+    <p data-i="work_p">Real projects and products. Press play — every piece below was made with the same tools I'll use for you.</p>
+  </div>
+  <div class="grid">
+
+    <article class="card w8">
+      <div class="media wide"><video preload="none" playsinline poster="media/intercontinental_excerpt.jpg" src="media/intercontinental_excerpt.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>AI video</span><span>Kling</span><span>DaVinci Resolve</span><span data-i="tag_client">Client work</span></div>
+        <h3 data-i="ic_h">Brand film for a 5-star hotel in Almaty</h3>
+        <p data-i="ic_p">A falcon carries a sealed letter from the Bosphorus across the mountains to InterContinental Almaty. Hero scenes generated with AI from reference photos, combined with licensed real footage, edited and color-graded in DaVinci Resolve. Made for the hotel's staff event. Excerpt — full version on request.</p>
+        <div class="metrics"><div><b>62 s</b><span data-i="m_len">final film</span></div><div><b>4</b><span data-i="m_ver">versions with client edits</span></div><div><b>2 days</b><span data-i="m_time">to first cut</span></div></div>
+      </div>
+    </article>
+
+    <article class="card w4">
+      <div class="media sq"><video preload="none" playsinline loop poster="media/aurum_3d.jpg" src="media/aurum_3d.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>3D</span><span>Blender</span><span>Cycles</span></div>
+        <h3 data-i="au_h">3D product animation</h3>
+        <p data-i="au_p">Concept perfume bottle modeled, lit and rendered in Blender: glass, liquid, gold metal, studio light, 360° turntable. Same workflow for your product from photos or a sketch.</p>
+      </div>
+    </article>
+
+    
+    <article class="card w12">
+      <div class="media ui"><img src="media/ui_brew_app.jpg" alt="Brew coffee app UI concept — three mobile screens" loading="lazy"></div>
+      <div class="body">
+        <div class="tags"><span>UX/UI</span><span>Mobile app</span><span>Design system</span></div>
+        <h3 data-i="ui_h">UX/UI concept: order-ahead coffee app</h3>
+        <p data-i="ui_p">Home with loyalty progress, product customization and live order tracking. One primary action per screen, clear hierarchy, large touch targets, a small design system (colors, type, components) ready for developers.</p>
+      </div>
+    </article>
+
+    <article class="card w6">
+      <div class="media wide"><video preload="none" playsinline poster="media/translator_demo.jpg" src="media/translator_demo.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>Python</span><span>Whisper</span><span>LLM</span><span>TTS</span><span data-i="tag_product">Own product</span></div>
+        <h3 data-i="tr_h">AI simultaneous interpreter — runs offline on a laptop</h3>
+        <p data-i="tr_p">My own software for live events and Zoom: speech → text → translation → voice in another language, about 1.5 s behind the speaker. Used at a live medical conference. Press play: English lecture with the Russian AI voice on top.</p>
+        <ul>
+          <li data-i="tr_1">7 languages: Russian, English, Kazakh, Chinese, Spanish, German, French</li>
+          <li data-i="tr_2">Zoom interpretation channel, vMix/NDI feed for the hall, audio on guests' phones via QR</li>
+          <li data-i="tr_3">No internet, no per-minute fees — one RTX laptop</li>
+        </ul>
+        <div class="metrics"><div><b>0.5–1 s</b><span data-i="m_sub">subtitles delay</span></div><div><b>~1.5 s</b><span data-i="m_voice">voice delay</span></div><div><b>20</b><span data-i="m_phones">phones at once (tested)</span></div></div>
+      </div>
+    </article>
+
+    <article class="card w6">
+      <div class="media wide"><video preload="none" playsinline poster="media/longform_news.jpg" src="media/longform_news.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>YouTube</span><span data-i="tag_long">Long-form edit</span><span>AI voice</span></div>
+        <h3 data-i="ln_h">YouTube long-form: script, AI voice-over, edit</h3>
+        <p data-i="ln_p">A 7-minute news video for a gaming channel: script, natural AI voice, pacing, B-roll, captions, thumbnails A/B. Excerpt shown.</p>
+        <ul>
+          <li data-i="ln_1">Voice generated locally — no robotic TTS</li>
+          <li data-i="ln_2">Two thumbnail variants for A/B testing</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card w4">
+      <div class="media tall"><video preload="none" playsinline poster="media/suitcase_3d.jpg" src="media/suitcase_3d.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>3D motion</span><span>Reels</span><span>Code-driven</span></div>
+        <h3 data-i="sc_h">3D "What if" Reel</h3>
+        <p data-i="sc_p">"What if your suitcase doubled in weight every flight?" — a fully animated 3D Reel, cut to the beat of a trending track, sound effects on every hit.</p>
+      </div>
+    </article>
+
+    <article class="card w4">
+      <div class="media tall"><video preload="none" playsinline poster="media/shorts_glitches.jpg" src="media/shorts_glitches.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>Shorts</span><span data-i="tag_auto">Automation</span></div>
+        <h3 data-i="sh_h">Faceless Shorts pipeline</h3>
+        <p data-i="sh_p">An automated "factory" for a YouTube Shorts channel: topic → script → AI voice → edit with captions and SFX → CapCut project for final polish. Up to 3 Shorts a day.</p>
+      </div>
+    </article>
+
+    <article class="card w4">
+      <div class="media tall"><video preload="none" playsinline poster="media/shorts_voice.jpg" src="media/shorts_voice.mp4"></video><div class="play"><span></span></div></div>
+      <div class="body">
+        <div class="tags"><span>Shorts</span><span>Voice-over</span></div>
+        <h3 data-i="sv_h">Short with natural AI narration</h3>
+        <p data-i="sv_p">Hook in the first second, tight cuts, burned-in captions, voice that sounds human. Ready for YouTube Shorts, Reels and TikTok.</p>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section id="services" style="background:var(--bg2)"><div class="wrap">
+  <div class="sh">
+    <h2 data-i="svc_h">Services & starting prices</h2>
+    <p data-i="svc_p">Fixed price after a short brief. Final price depends on length and complexity — you get a quote before any work starts.</p>
+  </div>
+  <div class="svc">
+    <div class="s"><div class="ico">🎬</div><h3 data-i="s1_h">AI video ad / brand film</h3><p data-i="s1_p">Scenes generated with AI from your photos and references, plus real footage, edit, color, music.</p><div class="price" data-i="s1_pr">from $150</div><div class="time" data-i="s1_t">2–4 days</div></div>
+    <div class="s"><div class="ico">📱</div><h3 data-i="s2_h">Reels / Shorts / TikTok</h3><p data-i="s2_p">From your footage or stock: hook, captions, music, SFX. Packages for regular posting.</p><div class="price" data-i="s2_pr">from $25 per video</div><div class="time" data-i="s2_t">24–48 h</div></div>
+    <div class="s"><div class="ico">🧊</div><h3 data-i="s3_h">3D model, render & animation</h3><p data-i="s3_p">Product renders, 360° turntables, simple 3D models for web, ads and marketplaces.</p><div class="price" data-i="s3_pr">from $60</div><div class="time" data-i="s3_t">1–3 days</div></div>
+    <div class="s"><div class="ico">🌐</div><h3 data-i="s4_h">Landing page / website</h3><p data-i="s4_p">Fast, responsive one-page site that doesn't look like a template. Hosting and domain setup included.</p><div class="price" data-i="s4_pr">from $200</div><div class="time" data-i="s4_t">2–3 days</div></div>
+    <div class="s"><div class="ico">🤖</div><h3 data-i="s5_h">Telegram bot & automation</h3><p data-i="s5_p">Bots with buttons, lead collection to Google Sheets, AI answers; scripts that remove routine work.</p><div class="price" data-i="s5_pr">from $150</div><div class="time" data-i="s5_t">2–4 days</div></div>
+    <div class="s"><div class="ico">🗣️</div><h3 data-i="s6_h">Video translation & dubbing</h3><p data-i="s6_p">Translate your video to English (or RU/ES/ZH) with a natural AI voice and subtitles.</p><div class="price" data-i="s6_pr">from $15 per minute</div><div class="time" data-i="s6_t">1–2 days</div></div>
+    <div class="s"><div class="ico">🎙️</div><h3 data-i="s7_h">AI interpretation for events</h3><p data-i="s7_p">Live AI translation for Zoom webinars, conferences and lectures — voice to the hall or guests' phones.</p><div class="price" data-i="s7_pr">quote on request</div><div class="time" data-i="s7_t">setup in 1 day</div></div>
+    <div class="s"><div class="ico">⚙️</div><h3 data-i="s8_h">Custom AI tool</h3><p data-i="s8_p">Python apps with speech recognition, LLMs, TTS, video processing — built for your workflow.</p><div class="price" data-i="s8_pr">from $300</div><div class="time" data-i="s8_t">by scope</div></div>
+
+    <div class="s"><div class="ico">🎨</div><h3 data-i="s9_h">UX/UI design</h3><p data-i="s9_p">Interfaces for websites, apps and dashboards: user flows, wireframes, clickable prototypes, design systems.</p><div class="price" data-i="s9_pr">from $150</div><div class="time" data-i="s9_t">2–5 days</div></div>
+    <div class="s"><div class="ico">✒️</div><h3 data-i="s10_h">Brand identity & graphics</h3><p data-i="s10_p">Logo, colors, fonts, social media templates, posters, banners and presentations.</p><div class="price" data-i="s10_pr">from $80</div><div class="time" data-i="s10_t">2–4 days</div></div>
+    <div class="s"><div class="ico">✨</div><h3 data-i="s11_h">Motion graphics & animation</h3><p data-i="s11_p">Animated logos, explainers, Lottie animations for web and apps, titles and lower thirds.</p><div class="price" data-i="s11_pr">from $60</div><div class="time" data-i="s11_t">1–3 days</div></div>
+    <div class="s"><div class="ico">🎵</div><h3 data-i="s12_h">Music, jingles & sound design</h3><p data-i="s12_p">Original background music, jingles and sound effects for ads, videos and podcasts.</p><div class="price" data-i="s12_pr">from $50</div><div class="time" data-i="s12_t">1–3 days</div></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="sh"><h2 data-i="pr_h">How I work</h2><p data-i="pr_p">Clear steps, no surprises. Communication in English or Russian, in writing.</p></div>
+  <div class="steps">
+    <div class="step"><h3 data-i="p1_h">Brief</h3><p data-i="p1_p">You send the task, references and materials. I reply with questions, a plan and a fixed price.</p></div>
+    <div class="step"><h3 data-i="p2_h">First draft</h3><p data-i="p2_p">Within 24–48 hours for most jobs — a free sample is possible for short videos.</p></div>
+    <div class="step"><h3 data-i="p3_h">Revisions</h3><p data-i="p3_p">Two rounds of edits included. You see progress, not a black box.</p></div>
+    <div class="step"><h3 data-i="p4_h">Delivery</h3><p data-i="p4_p">Final files in every format you need, plus the editable project on request.</p></div>
+  </div>
+  <div style="margin-top:56px">
+    <p style="color:var(--dim);font-size:14px;margin-bottom:14px" data-i="tools_h">Tools</p>
+    <div class="tools"><span>DaVinci Resolve Studio</span><span>CapCut</span><span>Kling AI</span><span>Blender</span><span>ComfyUI</span><span>Remotion</span><span>Python</span><span>Whisper</span><span>Local LLMs</span><span>AI voice (TTS)</span><span>Node.js</span><span>HTML/CSS/JS</span><span>Figma-style UI</span><span>Lottie</span><span>Ableton Live</span><span>Telegram Bot API</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2 data-i="ct_h">Have a project? Let's talk.</h2>
+    <p data-i="ct_p">Send a short description and any references. I'll reply with questions, a plan and a fixed price — usually within a few hours.</p>
+    <div class="cta" id="contacts"></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Alex · <span data-i="foot">AI video, 3D & web · Kazakhstan · working worldwide, remote</span></div></footer>
+
+<script>
+/* ===== Contacts: fill in, empty ones are hidden ===== */
+const CONTACT = {
+  telegram: "",   // username without @
+  whatsapp: "",   // digits only, e.g. 77001234567
+  email:    "",
+  upwork:   "",   // full profile URL
+  fiverr:   ""    // full profile URL
+};
+
+const RU = {
+  nav_work:"Работы", nav_svc:"Услуги", nav_proc:"Как работаю", nav_contact:"Контакты",
+  avail:"Беру новые проекты · отвечаю в течение пары часов",
+  h1:"ИИ-видео, 3D и сайты — <em>за дни</em>, а не недели.",
+  lead:"Делаю рекламу и имиджевые ролики со сценами от нейросети, монтирую Reels и Shorts, анимирую товары в 3D, рисую интерфейсы и фирменный стиль, собираю сайты, ботов и свои ИИ-программы. Один исполнитель, полный набор ИИ-инструментов, быстрые сроки.",
+  reel_tag:"Ролик для отеля · ИИ + реальные кадры",
+  cta1:"Обсудить проект →", cta2:"Смотреть работы",
+  st1:"ролик для 5★ отеля", st2:"первый вариант", st3:"правки включены", st4:"общение",
+  work_h:"Избранные работы", work_p:"Реальные проекты и свои продукты. Нажмите play — всё сделано теми же инструментами, что и ваш заказ.",
+  tag_client:"Заказ клиента", tag_product:"Свой продукт", tag_long:"Длинный ролик", tag_auto:"Автоматизация",
+  ic_h:"Имиджевый ролик для 5-звёздочного отеля в Алматы",
+  ic_p:"Сокол несёт запечатанное письмо с Босфора через горы в InterContinental Almaty. Ключевые сцены сгенерированы нейросетью по фото-референсам, вместе с реальными кадрами, монтаж и цвет в DaVinci Resolve. Сделан для мероприятия отеля. Фрагмент — полная версия по запросу.",
+  m_len:"итоговый ролик", m_ver:"версии с правками клиента", m_time:"до первого монтажа",
+  au_h:"3D-анимация товара", au_p:"Концепт флакона духов: модель, свет и рендер в Blender — стекло, жидкость, золото, студийный свет, вращение 360°. Так же сделаю ваш товар по фото или эскизу.",
+  ui_h:"UX/UI-концепт: приложение кофейни с заказом заранее", ui_p:"Главная с прогрессом бонусов, настройка напитка и отслеживание заказа. Одно главное действие на экран, понятная иерархия, крупные кнопки и небольшая дизайн-система (цвета, шрифты, компоненты) для разработчиков.",
+  tr_h:"ИИ-синхронный переводчик — работает без интернета на ноутбуке",
+  tr_p:"Моя программа для мероприятий и Zoom: речь → текст → перевод → голос на другом языке, примерно через 1,5 с после спикера. Работала на живой медицинской конференции. Нажмите play: английская лекция и поверх — русский ИИ-голос.",
+  tr_1:"7 языков: русский, английский, казахский, китайский, испанский, немецкий, французский", tr_2:"Канал перевода в Zoom, поток для vMix/NDI в зал, звук на телефоны гостей по QR", tr_3:"Без интернета и поминутной оплаты — один ноутбук с RTX",
+  m_sub:"задержка субтитров", m_voice:"задержка голоса", m_phones:"телефонов сразу (проверено)",
+  ln_h:"Длинный ролик для YouTube: сценарий, ИИ-озвучка, монтаж", ln_p:"7-минутный новостной ролик для игрового канала: сценарий, живой ИИ-голос, темп, перебивки, титры, две обложки для A/B. Показан фрагмент.",
+  ln_1:"Голос генерируется локально — не роботизированный TTS", ln_2:"Две обложки для A/B-теста",
+  sc_h:"3D-ролик «What if»", sc_p:"«Что если ваш чемодан тяжелеет вдвое с каждым рейсом?» — полностью анимированный 3D-Reels, смонтирован в бит трендового трека, звук на каждом ударе.",
+  sh_h:"Конвейер шортсов без лица", sh_p:"Автоматическая «фабрика» для канала Shorts: тема → сценарий → ИИ-голос → монтаж с субтитрами и звуками → проект CapCut для финальной полировки. До 3 шортсов в день.",
+  sv_h:"Шортс с живой ИИ-озвучкой", sv_p:"Хук в первую секунду, плотный монтаж, вшитые субтитры, голос как у человека. Готово для Shorts, Reels и TikTok.",
+  svc_h:"Услуги и цены", svc_p:"Фиксированная цена после короткого брифа. Итог зависит от длины и сложности — цену называю до начала работы.",
+  s1_h:"ИИ-реклама / имиджевый ролик", s1_p:"Сцены от нейросети по вашим фото и референсам, реальные кадры, монтаж, цвет, музыка.", s1_pr:"от 60 000 ₸", s1_t:"2–4 дня",
+  s2_h:"Reels / Shorts / TikTok", s2_p:"Из ваших съёмок или стока: хук, субтитры, музыка, звуки. Пакеты для регулярного постинга.", s2_pr:"от 10 000 ₸ за ролик", s2_t:"24–48 ч",
+  s3_h:"3D-модель, рендер, анимация", s3_p:"Рендеры товаров, вращение 360°, простые 3D-модели для сайта, рекламы и маркетплейсов.", s3_pr:"от 25 000 ₸", s3_t:"1–3 дня",
+  s4_h:"Лендинг / сайт", s4_p:"Быстрый адаптивный сайт-одностраничник, не похожий на шаблон. Хостинг и домен настрою.", s4_pr:"от 80 000 ₸", s4_t:"2–3 дня",
+  s5_h:"Telegram-бот и автоматизация", s5_p:"Боты с кнопками, сбор заявок в Google Таблицы, ответы ИИ; скрипты, которые убирают рутину.", s5_pr:"от 60 000 ₸", s5_t:"2–4 дня",
+  s6_h:"Перевод и озвучка видео", s6_p:"Переведу ваше видео на английский (или испанский, китайский) живым ИИ-голосом и с субтитрами.", s6_pr:"от 7 000 ₸ за минуту", s6_t:"1–2 дня",
+  s7_h:"ИИ-перевод мероприятий", s7_p:"Синхронный ИИ-перевод вебинаров в Zoom, конференций и лекций — голос в зал или на телефоны гостей.", s7_pr:"цена по запросу", s7_t:"настройка за 1 день",
+  s8_h:"ИИ-программа под задачу", s8_p:"Программы на Python: распознавание речи, нейросети, синтез голоса, обработка видео — под ваш процесс.", s8_pr:"от 120 000 ₸", s8_t:"по объёму",
+  s9_h:"UX/UI-дизайн", s9_p:"Интерфейсы сайтов, приложений и панелей: сценарии, прототипы, кликабельные макеты, дизайн-системы.", s9_pr:"от 60 000 ₸", s9_t:"2–5 дней",
+  s10_h:"Фирменный стиль и графика", s10_p:"Логотип, цвета, шрифты, шаблоны для соцсетей, постеры, баннеры, презентации.", s10_pr:"от 30 000 ₸", s10_t:"2–4 дня",
+  s11_h:"Моушн-дизайн и анимация", s11_p:"Анимированные логотипы, объясняющие ролики, Lottie-анимации для сайтов и приложений, титры.", s11_pr:"от 25 000 ₸", s11_t:"1–3 дня",
+  s12_h:"Музыка, джинглы, звук", s12_p:"Своя фоновая музыка, джинглы и звуковые эффекты для рекламы, роликов и подкастов.", s12_pr:"от 20 000 ₸", s12_t:"1–3 дня",
+  pr_h:"Как работаю", pr_p:"Понятные шаги, без сюрпризов. Общение на русском или английском, письменно.",
+  p1_h:"Бриф", p1_p:"Вы присылаете задачу, референсы и материалы. Я отвечаю вопросами, планом и фиксированной ценой.",
+  p2_h:"Первый вариант", p2_p:"За 24–48 часов для большинства задач — для коротких роликов возможен бесплатный образец.",
+  p3_h:"Правки", p3_p:"Два круга правок включены. Вы видите ход работы.",
+  p4_h:"Сдача", p4_p:"Готовые файлы в нужных форматах и, по запросу, проект для правок.",
+  tools_h:"Инструменты",
+  ct_h:"Есть проект? Напишите.", ct_p:"Опишите задачу в двух словах и пришлите референсы. Отвечу вопросами, планом и ценой — обычно в течение пары часов.",
+  foot:"ИИ-видео, 3D и сайты · Казахстан · работаю удалённо по всему миру"
+};
+
+const EN = {};
+document.querySelectorAll("[data-i]").forEach(el => EN[el.dataset.i] = el.innerHTML);
+
+function setLang(l){
+  const d = l === "ru" ? RU : EN;
+  document.querySelectorAll("[data-i]").forEach(el => { const v = d[el.dataset.i]; if (v) el.innerHTML = v; });
+  document.documentElement.lang = l;
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.l === l));
+  renderContacts(l);
+  try { localStorage.setItem("lang", l); } catch(e) {}
+}
+
+function renderContacts(l){
+  const box = document.getElementById("contacts"); box.innerHTML = "";
+  const items = [
+    ["telegram", "Telegram", u => "https://t.me/" + u, true],
+    ["whatsapp", "WhatsApp", u => "https://wa.me/" + u],
+    ["email", l === "ru" ? "Почта" : "Email", u => "mailto:" + u],
+    ["upwork", "Upwork", u => u],
+    ["fiverr", "Fiverr", u => u]
+  ];
+  let first = true;
+  items.forEach(([k, label, href]) => {
+    if (!CONTACT[k]) return;
+    const a = document.createElement("a");
+    a.className = "btn" + (first ? " main" : ""); first = false;
+    a.href = href(CONTACT[k]); a.target = "_blank"; a.rel = "noopener"; a.textContent = label;
+    box.appendChild(a);
+  });
+  if (!box.children.length) box.innerHTML = '<span style="color:var(--dim)">contacts coming soon</span>';
+}
+
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.l));
+
+/* video: click to play with sound, one at a time */
+document.querySelectorAll(".media").forEach(m => {
+  const v = m.querySelector("video"); if (!v) return;
+  m.addEventListener("click", () => {
+    if (v.paused) {
+      document.querySelectorAll(".media video").forEach(o => { if (o !== v) { o.pause(); o.parentElement.classList.remove("playing"); } });
+      v.controls = true; v.play(); m.classList.add("playing");
+    }
+  });
+  v.addEventListener("ended", () => m.classList.remove("playing"));
+});
+
+let start = "en";
+try { start = localStorage.getItem("lang") || (navigator.language || "").startsWith("ru") && "ru" || "en"; } catch(e) {}
+setLang(start);
+</script>
+</body>
+</html>
